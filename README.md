@@ -44,3 +44,28 @@ python3 tm.py
 Và sau đó chương trình sẽ chạy và hiển thị quá trình cập nhật cho từng tệp/thư mục.
 
 Khi hoàn thành, màn hình sẽ hiện dòng chữ Nhấn Enter để thoát..., bạn chỉ cần bấm phím Enter trên bàn phím để đóng cửa sổ là xong.
+# Tùy chỉnh thời gian mong muốn
+Để cấu hình thời gian mong muốn thì cần sửa lại code Python của mình.
+
+Trong file code, thời gian được thiết lập ở dòng chứa hàm datetime(...). Cụ thể, bạn hãy tìm đoạn code sau:
+```
+new_time = datetime(2026, 11, 7, 11, 0, 0).timestamp() + random_seconds
+```
+Ý nghĩa các con số bên trong ngoặc datetime(Năm, Tháng, Ngày, Giờ, Phút, Giây) lần lượt là:
+- 2026: Năm
+- 11: Tháng (Tháng 11)
+- 7: Ngày (Ngày 7)
+- 11: Giờ (11 giờ sáng - định dạng 24h, ví dụ 3 giờ chiều là 15)
+- 0: Phút
+- 0: Giây
+
+### Cách tùy chỉnh theo ý muốn 
+- Mở tệp Python (New Text Document.py hoặc tên bạn đã đổi) bằng một trình soạn thảo văn bản bất kỳ (như Notepad, VS Code, v.v.).
+- Tìm đến 2 dòng có chứa lệnh datetime(...) (thường nằm ở hàm xử lý file và thư mục).
+- Thay đổi các con số bên trong thành thời gian bạn muốn.
+
+Ví dụ: Nếu bạn muốn đổi thời gian thành ngày 25 tháng 12 năm 2025, lúc 08:30 sáng, hãy sửa lại đoạn code đó thành:
+```
+new_time = datetime(2025, 12, 25, 8, 30, 0).timestamp() + random_seconds
+```
+> Lưu ý: Đoạn mã này có cộng thêm một khoảng thời gian ngẫu nhiên từ 0 đến 1800 giây ~ 30 phút để các file không bị trùng hoàn toàn từng giây với nhau. Nếu bạn muốn tất cả các file có chính xác một mốc thời gian cố định không cộng thêm giây ngẫu nhiên nào, bạn có thể xóa đoạn + random_seconds đi.
