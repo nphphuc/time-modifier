@@ -60,7 +60,7 @@ new_time = datetime(2026, 11, 7, 11, 0, 0).timestamp() + random_seconds
 - 0: Giây
 
 ### Cách tùy chỉnh theo ý muốn 
-- Mở tệp Python (New Text Document.py hoặc tên bạn đã đổi) bằng một trình soạn thảo văn bản bất kỳ (như Notepad, VS Code, v.v.).
+- Mở file tm.py bằng một trình soạn thảo văn bản bất kỳ (như Notepad, VS Code, v.v.).
 - Tìm đến 2 dòng có chứa lệnh datetime(...) (thường nằm ở hàm xử lý file và thư mục).
 - Thay đổi các con số bên trong thành thời gian bạn muốn.
 
